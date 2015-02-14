@@ -1,7 +1,11 @@
-.container{
+.item_lists .item_list{
   padding: 0 10px;
 }
 
-.add_items .text_input form label{
-  background-color: blue;
+.add_items .text_input,
+.add_items .date_expires,
+.add_items .buttons,   
+.item_lists .item_list,
+.profiles{
+  padding: 0 10px;
 }

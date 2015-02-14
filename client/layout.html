@@ -22,7 +22,7 @@
 </template>
 
 <template name="add_item">
-  <div name="add_items">
+  <div class="add_items">
     <header>
       <div data-role="header">
         <h1>Add Item</h1>
@@ -37,58 +37,69 @@
         <textarea cols="40" rows="8" name="textarea-6" id="textarea-6" placeholder="Description"></textarea>
       </form>
     </div>
-
-    <form>
-       <label for="date-2">Date Expires</label>
-       <input type="date" data-clear-btn="true" name="date-2" id="date-2" value="">
-    </form>
+    
+    <div class="date_expires">
+      <form>
+         <label for="date-2">Date Expires</label>
+         <input type="date" data-clear-btn="true" name="date-2" id="date-2" value="">
+      </form>
+    </div>  
+    
     <div class="buttons">
-      <button class="ui-btn ui-btn-inline ui-btn-icon-left">cancel</button>
-      <button class="ui-btn ui-btn-inline ui-btn-icon-right">save</button>
+      <div class="cancel_button">
+        <button class="ui-btn ui-btn-icon-left">cancel</button>
+      </div>
+      <div class="save_button">      
+        <button class="ui-btn ui-btn-icon-right">save</button>
+      </div>
     </div>
   </div>
 </template>
 
 <template name="item_list">
-  <header>
-    <div data-role="header">
-      <h1>List</h1>
+  <div class="item_lists">
+    <header>
+      <div data-role="header">
+        <h1>List</h1>
+      </div>
+    </header>
+    <div class="item_list">
+      <ul data-role="listview" data-autodividers="true" data-filter="true" data-inset="true">
+        <li><a href="#" class="ui-btn ui-icon-delete ui-btn-icon-right">Item 1</a></li>
+        <li><a href="#" class="ui-btn ui-icon-delete ui-btn-icon-right">Item 2</a></li>
+        <li><a href="#" class="ui-btn ui-icon-delete ui-btn-icon-right">Item 3</a></li>
+        <li><a href="#" class="ui-btn ui-icon-delete ui-btn-icon-right">Item 4</a></li>
+        <li><a href="#" class="ui-btn ui-icon-delete ui-btn-icon-right">Item 5</a></li>
+        <li><a href="#" class="ui-btn ui-icon-delete ui-btn-icon-right">Item 6</a></li>
+        <li><a href="#" class="ui-btn ui-icon-delete ui-btn-icon-right">Item 7</a></li>
+        <li><a href="#" class="ui-btn ui-icon-delete ui-btn-icon-right">Item 8</a></li>
+        <li><a href="#" class="ui-btn ui-icon-delete ui-btn-icon-right">Item 9</a></li>
+        <li><a href="#" class="ui-btn ui-icon-delete ui-btn-icon-right">Item 10</a></li>
+      </ul>
+    </div><!-- closing item_list -->
+    <div class="add_item_button">
+      <button class="ui-btn ui-shadow ui-corner-all ui-btn-icon-right ui-icon-plus">add item</button>
     </div>
-  </header>
-  <div class="item_list">
-    <ul data-role="listview" data-autodividers="true" data-filter="true" data-inset="true">
-      <li><a href="#" class="ui-btn ui-icon-delete ui-btn-icon-right">Item 1</a></li>
-      <li><a href="#" class="ui-btn ui-icon-delete ui-btn-icon-right">Item 2</a></li>
-      <li><a href="#" class="ui-btn ui-icon-delete ui-btn-icon-right">Item 3</a></li>
-      <li><a href="#" class="ui-btn ui-icon-delete ui-btn-icon-right">Item 4</a></li>
-      <li><a href="#" class="ui-btn ui-icon-delete ui-btn-icon-right">Item 5</a></li>
-      <li><a href="#" class="ui-btn ui-icon-delete ui-btn-icon-right">Item 6</a></li>
-      <li><a href="#" class="ui-btn ui-icon-delete ui-btn-icon-right">Item 7</a></li>
-      <li><a href="#" class="ui-btn ui-icon-delete ui-btn-icon-right">Item 8</a></li>
-      <li><a href="#" class="ui-btn ui-icon-delete ui-btn-icon-right">Item 9</a></li>
-      <li><a href="#" class="ui-btn ui-icon-delete ui-btn-icon-right">Item 10</a></li>
-    </ul>
-  </div><!-- closing item_list -->
-  <div>
-    <button class="ui-btn ui-shadow ui-corner-all ui-btn-icon-right ui-icon-plus">add item</button>
   </div>
 </template>
 
 <template name="profile">
-  <header>
-    <div data-role="header">
-      <h1>Profile</h1>
+  <div class="profiles">
+    <header>
+      <div data-role="header">
+        <h1>Profile</h1>
+      </div>
+    </header>
+    <div class="text_input">
+      <form>
+        <label for="text-6">Phone Number</label>
+         <input type="text" name="text-6" id="text-6" value="" placeholder="(###)###-####">
+      </form>
+    </div>  
+    <div class="button_save">
+      <button class="ui-btn ui-btn-inline ui-btn-icon-right">save</button>
     </div>
-  </header>
-  <div class="text_input">
-    <form>
-      <label for="text-6">Phone Number</label>
-       <input type="text" name="text-6" id="text-6" value="" placeholder="(###)###-####">
-    </form>
-  </div>  
-  <div class="button_save">
-    <button class="ui-btn ui-btn-inline ui-btn-icon-right">save</button>
-  </div>
+  </div> 
 </template>
 
 
