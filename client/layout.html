@@ -1,8 +1,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>phRESH</title>
-  <link rel="stylesheet" href="css/pHresh.min.css" />
+  <title>rxresh</title>
+  <link rel="stylesheet" href="css/pHresh.css" />
   <link rel="stylesheet" href="css/jquery.mobile.icons.min.css" />
   <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
   <link rel="stylesheet" href="css/phresh-custom.css"/>
@@ -11,7 +11,9 @@
 </head>
 
 <body>
-  {{> layout}}
+  <div class="container">
+    {{> layout}}
+  </div>
 </body>
 
 <template name="layout">
@@ -20,28 +22,30 @@
 </template>
 
 <template name="add_item">
-  <header>
-    <div data-role="header">
-      <h1>Add Item</h1>
+  <div name="add_items">
+    <header>
+      <div data-role="header">
+        <h1>Add Item</h1>
+      </div>
+    </header>
+
+    <div class="text_input">
+      <form>
+        <label for="text-6">Item:</label>
+         <input type="text" name="text-6" id="text-6" value="" placeholder="Item">
+        <label for="textarea-6">Description:</label>
+        <textarea cols="40" rows="8" name="textarea-6" id="textarea-6" placeholder="Description"></textarea>
+      </form>
     </div>
-  </header>
 
-  <div class="text_input">
     <form>
-      <label for="text-6">Item:</label>
-       <input type="text" name="text-6" id="text-6" value="" placeholder="Item">
-      <label for="textarea-6">Description:</label>
-      <textarea cols="40" rows="8" name="textarea-6" id="textarea-6" placeholder="Description"></textarea>
+       <label for="date-2">Date Expires</label>
+       <input type="date" data-clear-btn="true" name="date-2" id="date-2" value="">
     </form>
-  </div>
-
-  <form>
-     <label for="date-2">Date Expires</label>
-     <input type="date" data-clear-btn="true" name="date-2" id="date-2" value="">
-  </form>
-  <div class="buttons">
-    <button class="ui-btn ui-btn-inline ui-btn-icon-left">cancel</button>
-    <button class="ui-btn ui-btn-inline ui-btn-icon-right">save</button>
+    <div class="buttons">
+      <button class="ui-btn ui-btn-inline ui-btn-icon-left">cancel</button>
+      <button class="ui-btn ui-btn-inline ui-btn-icon-right">save</button>
+    </div>
   </div>
 </template>
 
@@ -91,7 +95,7 @@
 <template name="footer">
   <footer>
     <div data-role="footer">
-      <h4>phRESH</h4>
+      <h4>rxresh</h4>
     </div>
   </footer>
 </template>
