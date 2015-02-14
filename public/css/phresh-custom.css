@@ -1,0 +1,7 @@
+.container{
+  padding: 0 10px;
+}
+
+.add_items .text_input form label{
+  background-color: blue;
+}
