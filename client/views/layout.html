@@ -1,0 +1,55 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>phRESH</title>
+  <link rel="stylesheet" href="themes/pHresh.min.css" />
+  <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+  <link rel="stylesheet" href="themes/phresh-custom.css"/>
+  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+
+<body>
+  
+</body>
+
+
+<template name="layout">
+  {{> yield}}
+</template>
+
+<template name="add_item">
+  <header>
+    <div data-role="header">
+      <h1>Add Item</h1>
+    </div>
+  </header>
+
+  <div class="text_input">
+    <form>
+      <label for="text-6">Item:</label>
+       <input type="text" name="text-6" id="text-6" value="" placeholder="Item">
+      <label for="textarea-6">Description:</label>
+      <textarea cols="40" rows="8" name="textarea-6" id="textarea-6" placeholder="Description"></textarea>
+    </form>
+  </div>
+
+  <form>
+     <label for="date-2">Date Expires</label>
+     <input type="date" data-clear-btn="true" name="date-2" id="date-2" value="">
+  </form>
+  <div class="buttons">
+    <button class="ui-btn ui-btn-inline ui-btn-icon-left">cancel</button>
+    <button class="ui-btn ui-btn-inline ui-btn-icon-right">save</button>
+  </div>
+</template>
+
+
+<template name="footer">
+  <footer>
+    <div data-role="footer">
+      <h4>phRESH</h4>
+    </div>
+  </footer>
+</template>
