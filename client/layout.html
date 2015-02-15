@@ -3,22 +3,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>rxresh</title>
   <link rel="stylesheet" href="css/pHresh.css" />
-  <link rel="stylesheet" href="css/jquery.mobile.icons.min.css" />
-  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
-  <link rel="stylesheet" href="css/phresh-custom.css"/>
+  
   <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-  <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  
 </head>
 
 <body>
   <div class="container">
-    {{> layout}}
+    {{> yield }}
+    {{> footer }}
   </div>
 </body>
-
-<template name="layout">
-  {{> footer}}
-</template>
 
 <template name="add_item">
   <div class="add_items">
@@ -30,16 +25,14 @@
 
     <div class="text_input">
       <form>
-        <label for="text-6">Item:</label>
+        <label for="text-6">Item</label>
          <input type="text" name="text-6" id="text-6" value="" placeholder="Item">
-        <label for="textarea-6">Description:</label>
-        <textarea cols="40" rows="8" name="textarea-6" id="textarea-6" placeholder="Description"></textarea>
       </form>
     </div>
     
     <div class="date_expires">
       <form>
-         <label for="date-2">Date Expires</label>
+         <label for="date-2">Expiration Date</label>
          <input type="date" data-clear-btn="true" name="date-2" id="date-2" value="">
       </form>
     </div>  
@@ -95,14 +88,14 @@
 </template>
 
 <template name="item">
-  <li><a href="#" class="ui-btn ui-icon-delete ui-btn-icon-right">{{name}}</a></li>
+  <li class="ui-btn ui-icon-delete ui-btn-icon-right">{{name}} {{expirationDate}}</li>
 </template>
 
 
 <template name="footer">
   <footer>
     <div data-role="footer">
-      <h4>rxresh</h4>
+      <h4>FRxsh</h4>
     </div>
   </footer>
 </template>

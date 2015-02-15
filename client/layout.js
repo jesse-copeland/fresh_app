@@ -28,8 +28,9 @@ Template.item_list.prescriptionsList = function () {
   return Prescriptions.find();
 };
 
-// In your client code: asynchronously send an email
-// Meteor.call('sendReminder',
-//             '8083543054@txt.att.net',
-//             'FRxsh Reminder',
-//             'message content');
+Template.item.helpers({
+  formatDate: function (dateObj) {
+    var res = dateObj.getFullYear() + ' ' + (dateObj.getMonth() + 1) + ' ' + dateObj.getDate();
+    return res;
+  }
+});

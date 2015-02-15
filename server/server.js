@@ -18,7 +18,7 @@ Meteor.startup(function () {
     }
   ];
 
-  // if (Prescription === undefined || Prescription.find().length === 0) {
+  if (Prescriptions === undefined || Prescriptions.find().length === 0) {
     seedItems.forEach(function (item) {
       Prescriptions.insert({
         createdAt: new Date(),
@@ -26,5 +26,5 @@ Meteor.startup(function () {
         expirationDate: item.expirationDate
       });
     });
-  // }
+  }
 });
