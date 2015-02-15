@@ -12,8 +12,27 @@ if (Meteor.isClient) {
   });
 }
 
- // This function is called when the item form is submitted
 Template.add_item.events({
+  "click .save": function (event, template) {
+    var inputValue = event.target.add_item.value;
+    console.log(inputValue);
+
+    Tasks.insert({
+      text: text,
+      createdAt: new Date() // current time
+    });
+
+    // Clear form
+    event.target.text.value = "";
+
+    // Prevent default form submit
+    return false;
+  },
+    
+});
+
+ // This function is called when the item form is submitted
+/*Template.add_item.events({
   "submit .text_input": function (event) {
    
 
@@ -50,24 +69,8 @@ Template.add_item.events({
     // Prevent default form submit
     return false;
   }
-});
+});*/
 
 //input save button
-Template.add_item.events({
-  "click .save_button": function (event, template) {
-    
-  },
-  "submit form": function (event, template) {
-    var inputValue = event.target.add_item.value;
-    var helperValue = this;
-  }
-});
 
-//cancel button
-Template.add_item.events({
-  "click .cancel_buttong": function(event, template){
-    
 
-  },
-
-});
