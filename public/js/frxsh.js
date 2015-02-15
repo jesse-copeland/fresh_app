@@ -54,17 +54,6 @@ Template.add_item.events({
 
 //input save button
 Template.add_item.events({
-  "click .save_button": function () {
-  
-    Tasks.update(this._id, {$set: {checked: ! this.checked}});
-  },
-  "click .cancel_button": function () {
-    Tasks.remove(this._id);
-  }
-});
-
-
-Template.add_item.events({
   "click .save_button": function (event, template) {
     
   },
@@ -72,4 +61,13 @@ Template.add_item.events({
     var inputValue = event.target.add_item.value;
     var helperValue = this;
   }
+});
+
+//cancel button
+Template.add_item.events({
+  "click .cancel_buttong": function(event, template){
+    
+
+  },
+
 });
