@@ -20,7 +20,7 @@ Meteor.startup(function () {
 
   // if (Prescription === undefined || Prescription.find().length === 0) {
     seedItems.forEach(function (item) {
-      Prescription.insert({
+      Prescriptions.insert({
         createdAt: new Date(),
         name: item.name,
         expirationDate: item.expirationDate

@@ -23,6 +23,10 @@ Meteor.methods({
     });
   }
 });
+          
+Template.item_list.prescriptionsList = function () {
+  return Prescriptions.find();
+};
 
 // In your client code: asynchronously send an email
 // Meteor.call('sendReminder',

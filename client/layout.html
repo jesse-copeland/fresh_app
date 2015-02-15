@@ -64,16 +64,9 @@
     </header>
     <div class="item_list">
       <ul data-role="listview" data-autodividers="true" data-filter="true" data-inset="true">
-        <li><a href="#" class="ui-btn ui-icon-delete ui-btn-icon-right">Item 1</a></li>
-        <li><a href="#" class="ui-btn ui-icon-delete ui-btn-icon-right">Item 2</a></li>
-        <li><a href="#" class="ui-btn ui-icon-delete ui-btn-icon-right">Item 3</a></li>
-        <li><a href="#" class="ui-btn ui-icon-delete ui-btn-icon-right">Item 4</a></li>
-        <li><a href="#" class="ui-btn ui-icon-delete ui-btn-icon-right">Item 5</a></li>
-        <li><a href="#" class="ui-btn ui-icon-delete ui-btn-icon-right">Item 6</a></li>
-        <li><a href="#" class="ui-btn ui-icon-delete ui-btn-icon-right">Item 7</a></li>
-        <li><a href="#" class="ui-btn ui-icon-delete ui-btn-icon-right">Item 8</a></li>
-        <li><a href="#" class="ui-btn ui-icon-delete ui-btn-icon-right">Item 9</a></li>
-        <li><a href="#" class="ui-btn ui-icon-delete ui-btn-icon-right">Item 10</a></li>
+        {{#each prescriptionsList }}
+          {{> item}}
+        {{/each}}
       </ul>
     </div><!-- closing item_list -->
     <div class="add_item_button">
@@ -99,6 +92,10 @@
       <button class="ui-btn ui-btn-inline ui-btn-icon-right">save</button>
     </div>
   </div> 
+</template>
+
+<template name="item">
+  <li><a href="#" class="ui-btn ui-icon-delete ui-btn-icon-right">{{name}}</a></li>
 </template>
 
 

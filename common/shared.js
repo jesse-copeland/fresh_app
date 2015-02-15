@@ -1,1 +1,1 @@
-Prescription = new Mongo.Collection('prescription');
+Prescriptions = new Mongo.Collection('prescriptions');
