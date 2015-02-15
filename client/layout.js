@@ -28,8 +28,29 @@ Template.item_list.prescriptionsList = function () {
   return Prescriptions.find();
 };
 
+Template.add_item.events({
+  'click .save_button button': function (event, template) {
+    console.log("hey");
+    /*var inputValue = event.target.add_item.value;
+    
+
+    Tasks.insert({
+      text: text,
+      createdAt: new Date() // current time
+    });
+
+    // Clear form
+    event.target.text.value = "";
+
+    // Prevent default form submit
+    return false;*/
+  },
+    
+});
+
 // In your client code: asynchronously send an email
 // Meteor.call('sendReminder',
 //             '8083543054@txt.att.net',
 //             'FRxsh Reminder',
 //             'message content');
+
