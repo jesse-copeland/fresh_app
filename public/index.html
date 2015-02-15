@@ -1,0 +1,112 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>rxresh</title>
+  <link rel="stylesheet" href="css/pHresh.css" />
+  <link rel="stylesheet" href="css/jquery.mobile.icons.min.css" />
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+  <link rel="stylesheet" href="css/phresh-custom.css"/>
+  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    {{> layout}}
+  </div>
+</body>
+
+<template name="layout">
+  {{> add_item}}
+  {{> footer}}
+</template>
+
+<template name="add_item">
+  <div class="add_items">
+    <header>
+      <div data-role="header">
+        <h1>Add Item</h1>
+      </div>
+    </header>
+
+    <div class="text_input">
+      <form>
+        <label for="text-6">Item:</label>
+         <input type="text" name="text-6" id="text-6" value="" placeholder="Item">
+        <label for="textarea-6">Description:</label>
+        <textarea cols="40" rows="8" name="textarea-6" id="textarea-6" placeholder="Description"></textarea>
+      </form>
+    </div>
+    
+    <div class="date_expires">
+      <form>
+         <label for="date-2">Date Expires</label>
+         <input type="date" data-clear-btn="true" name="date-2" id="date-2" value="">
+      </form>
+    </div>  
+    
+    <div class="buttons">
+      <div class="cancel_button">
+        <button class="ui-btn ui-btn-icon-left">cancel</button>
+      </div>
+      <div class="save_button">      
+        <button class="ui-btn ui-btn-icon-right">save</button>
+      </div>
+    </div>
+  </div>
+</template>
+
+<template name="item_list">
+  <div class="item_lists">
+    <header>
+      <div data-role="header">
+        <h1>List</h1>
+      </div>
+    </header>
+    <div class="item_list">
+      <ul data-role="listview" data-autodividers="true" data-filter="true" data-inset="true">
+        <li><a href="#" class="ui-btn ui-icon-delete ui-btn-icon-right">Item 1</a></li>
+        <li><a href="#" class="ui-btn ui-icon-delete ui-btn-icon-right">Item 2</a></li>
+        <li><a href="#" class="ui-btn ui-icon-delete ui-btn-icon-right">Item 3</a></li>
+        <li><a href="#" class="ui-btn ui-icon-delete ui-btn-icon-right">Item 4</a></li>
+        <li><a href="#" class="ui-btn ui-icon-delete ui-btn-icon-right">Item 5</a></li>
+        <li><a href="#" class="ui-btn ui-icon-delete ui-btn-icon-right">Item 6</a></li>
+        <li><a href="#" class="ui-btn ui-icon-delete ui-btn-icon-right">Item 7</a></li>
+        <li><a href="#" class="ui-btn ui-icon-delete ui-btn-icon-right">Item 8</a></li>
+        <li><a href="#" class="ui-btn ui-icon-delete ui-btn-icon-right">Item 9</a></li>
+        <li><a href="#" class="ui-btn ui-icon-delete ui-btn-icon-right">Item 10</a></li>
+      </ul>
+    </div><!-- closing item_list -->
+    <div class="add_item_button">
+      <button class="ui-btn ui-shadow ui-corner-all ui-btn-icon-right ui-icon-plus">add item</button>
+    </div>
+  </div>
+</template>
+
+<template name="profile">
+  <div class="profiles">
+    <header>
+      <div data-role="header">
+        <h1>Profile</h1>
+      </div>
+    </header>
+    <div class="text_input">
+      <form>
+        <label for="text-6">Phone Number</label>
+         <input type="text" name="text-6" id="text-6" value="" placeholder="(###)###-####">
+      </form>
+    </div>  
+    <div class="button_save">
+      <button class="ui-btn ui-btn-inline ui-btn-icon-right">save</button>
+    </div>
+  </div> 
+</template>
+
+
+<template name="footer">
+  <footer>
+    <div data-role="footer">
+      <h4>rxresh</h4>
+    </div>
+  </footer>
+</template>
